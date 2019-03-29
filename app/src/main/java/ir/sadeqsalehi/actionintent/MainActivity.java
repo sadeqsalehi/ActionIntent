@@ -19,4 +19,15 @@ public class MainActivity extends AppCompatActivity {
         intent.setData(Uri.parse("http://www.google.com"));
         startActivity(intent);
     }
+    public void openSms(View view) {
+        Intent intent = new Intent(Intent.ACTION_VIEW);
+        intent.setData(Uri.parse("sms:+98 938-631-6696"));
+        intent.putExtra("sms_body","سلام علیکم");
+        startActivity(intent);
+    }
+    public void openDialer(View view) {
+        Intent intent = new Intent(Intent.ACTION_VIEW);
+        intent.setData(Uri.parse("tel:+98 938-631-6696"));
+        startActivity(intent);
+    }
 }
